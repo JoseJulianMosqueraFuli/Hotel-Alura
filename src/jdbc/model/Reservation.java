@@ -4,44 +4,48 @@ import java.sql.Date;
 
 public class Reservation {
     private Integer id;
-    private Date dateD;
-    private Date dateS;
+    private Date dateIn;
+    private Date dateOut;
     private String value;
-    private String paymentMode;
+    private String paymentMethod;
 
-    public Reservation(Date dateD, Date dateS, String value, String paymentMode) {
+    public Reservation(Date dateIn, Date dateOut, String value, String paymentMethod) {
         this.id = null; // El id se establece como nulo por defecto
-        this.dateD = dateD;
-        this.dateS = dateS;
+        this.dateIn = dateIn;
+        this.dateOut = dateOut;
         this.value = value;
-        this.paymentMode = paymentMode;
+        this.paymentMethod = paymentMethod;
     }
 
-    public Reservation(Integer id, Date dateD, Date dateS, String value, String paymentMode) {
+    public Reservation(Integer id, Date dateIn, Date dateOut, String value, String paymentMethod) {
         this.id = id;
-        this.dateD = dateD;
-        this.dateS = dateS;
+        this.dateIn = dateIn;
+        this.dateOut = dateOut;
         this.value = value;
-        this.paymentMode = paymentMode;
+        this.paymentMethod = paymentMethod;
     }
 
     public Integer getId() {
         return id;
     }
 
-    public Date getDateD() {
-        return dateD;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public Date getDateS() {
-        return dateS;
+    public Date getInDate() {
+        return dateIn;
+    }
+
+    public Date getOutDate() {
+        return dateOut;
     }
 
     public String getValue() {
         return value;
     }
 
-    public String getPaymentMode() {
-        return paymentMode;
+    public String getPaymentMethod() {
+        return paymentMethod;
     }
 }
