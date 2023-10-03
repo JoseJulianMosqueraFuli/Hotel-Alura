@@ -1,38 +1,39 @@
-package jdbc.model;
+package jdbc.modelo;
 
 import java.sql.Date;
 
-public class Guests {
+public class Huespedes {
     private Integer Id;
-    private String FirstName;
-    private String LastName;
-    private Date DateOfBirth;
-    private String Nationality;
-    private String PhoneNumber;
-    private Integer ReservationId;
+    private String Nombre;
+    private String Apellido;
+    private Date FechaNacimiento;
+    private String Nacionalidad;
+    private String Telefono;
+    private Integer IdReserva;
 
-    public Guests(String firstName, String lastName, Date dateOfBirth, String nationality, String phoneNumber,
-                  Integer reservationId) {
+    public Huespedes(String nombre, String apellido,  Date fechaNacimiento, String nacionalidad, String telefono,
+                     Integer idReserva) {
         super();
-        FirstName = firstName;
-        LastName = lastName;
-        DateOfBirth = dateOfBirth;
-        Nationality = nationality;
-        PhoneNumber = phoneNumber;
-        ReservationId = reservationId;
+        Nombre = nombre;
+        Apellido = apellido;
+        FechaNacimiento = fechaNacimiento;
+        Nacionalidad = nacionalidad;
+        Telefono = telefono;
+        IdReserva = idReserva;
     }
 
-    public Guests(Integer id, String firstName, String lastName, Date dateOfBirth, String nationality, String phoneNumber,
-                  Integer reservationId) {
+    public Huespedes(Integer id, String nombre, String apellido, Date fechaNacimiento, String nacionalidad,
+                     String telefono, Integer idReserva) {
         super();
         Id = id;
-        FirstName = firstName;
-        LastName = lastName;
-        DateOfBirth = dateOfBirth;
-        Nationality = nationality;
-        PhoneNumber = phoneNumber;
-        ReservationId = reservationId;
+        Nombre = nombre;
+        Apellido = apellido;
+        FechaNacimiento = fechaNacimiento;
+        Nacionalidad = nacionalidad;
+        Telefono = telefono;
+        IdReserva = idReserva;
     }
+
 
     public Integer getId() {
         return Id;
@@ -42,51 +43,53 @@ public class Guests {
         Id = id;
     }
 
-    public String getFirstName() {
-        return FirstName;
+
+    public String getNombre() {
+        return Nombre;
     }
 
-    public void setFirstName(String firstName) {
-        FirstName = firstName;
+    public void setNombre(String nombre) {
+        Nombre = nombre;
     }
 
-    public String getLastName() {
-        return LastName;
+    public String getApellido() {
+        return Apellido;
     }
 
-    public void setLastName(String lastName) {
-        LastName = lastName;
+    public void setApellido(String apellido) {
+        Apellido = apellido;
     }
 
-    public String getNationality() {
-        return Nationality;
+    public String getNacionalidad() {
+        return Nacionalidad;
     }
 
-    public void setNationality(String nationality) {
-        Nationality = nationality;
+    public void setNacionalidad(String nacionalidad) {
+        Nacionalidad = nacionalidad;
     }
 
-    public Date getDateOfBirth() {
-        return DateOfBirth;
+    public Date getFechaNacimiento() {
+        return FechaNacimiento;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
-        DateOfBirth = dateOfBirth;
+    public void setFechaNacimiento(Date fechaNacimiento) {
+        FechaNacimiento = fechaNacimiento;
     }
 
-    public String getPhoneNumber() {
-        return PhoneNumber;
+    public String getTelefono() {
+        return Telefono;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        PhoneNumber = phoneNumber;
+    public void setTelefono(String telefono) {
+        Telefono = telefono;
     }
 
-    public Integer getReservationId() {
-        return ReservationId;
+    public Integer getIdReserva() {
+        return IdReserva;
     }
 
-    public void setReservationId(Integer reservationId) {
-        ReservationId = reservationId;
+    public void setIdReserva(Integer idReserva) {
+        IdReserva = idReserva;
     }
+
 }

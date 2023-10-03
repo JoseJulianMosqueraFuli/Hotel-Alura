@@ -1,38 +1,38 @@
 package jdbc.controller;
 
+import jdbc.dao.ReservaDAO;
+import jdbc.factory.ConnectionFactory;
+import jdbc.modelo.Reserva;
+
 import java.sql.Connection;
 import java.sql.Date;
 import java.util.List;
 
-import jdbc.dao.ReservaDAO;
-import jdbc.factory.ConnectionFactory;
-import jdbc.model.Reserva;
-
-public class ReservationsController {
+public class ReservasController {
     private ReservaDAO reservaDAO;
 
-    public ReservationsController() {
-        Connection connection = new ConnectionFactory().retrieveConnection();
+    public ReservasController() {
+        Connection connection = new ConnectionFactory().recuperarConexion();
         this.reservaDAO = new ReservaDAO(connection);
     }
 
-    public void save(Reserva reserva) {
-        this.reservaDAO.save(reserva);
+    public void guardar(Reserva reserva) {
+        this.reservaDAO.guardar(reserva);
     }
 
-    public List<Reserva> findAll() {
-        return this.reservaDAO.findAll();
+    public List<Reserva> buscar() {
+        return this.reservaDAO.buscar();
     }
 
-    public List<Reserva> findById(String id) {
-        return this.reservaDAO.findById(id);
+    public List<Reserva> buscarId(String id) {
+        return this.reservaDAO.buscarId(id);
     }
 
-    public void update(Date checkInDate, Date checkOutDate, String value, String paymentMethod, Integer id) {
-        this.reservaDAO.update(checkInDate, checkOutDate, value, paymentMethod, id);
+    public void actualizar(Date fechaE, Date fechaS, String valor, String formaPago, Integer id) {
+        this.reservaDAO.Actualizar(fechaE, fechaS, valor, formaPago, id);
     }
 
-    public void delete(Integer id) {
-        this.reservaDAO.delete(id);
+    public void Eliminar(Integer id) {
+        this.reservaDAO.Eliminar(id);
     }
 }

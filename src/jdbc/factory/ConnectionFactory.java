@@ -21,12 +21,11 @@ public class ConnectionFactory {
         this.dataSource = comboPooledDataSource;
     }
 
-    public Connection retrieveConnection() {
+    public Connection recuperarConexion() {
         try {
             return this.dataSource.getConnection();
         } catch (SQLException e) {
-            throw new RuntimeException("Error al obtener la conexión a la base de datos", e);
+            throw new RuntimeException(e);
         }
     }
-
 }

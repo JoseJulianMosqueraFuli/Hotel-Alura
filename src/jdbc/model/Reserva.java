@@ -1,28 +1,29 @@
-package jdbc.model;
+package jdbc.modelo;
 
 import java.sql.Date;
 
-public class Reservation {
-    private Integer id;
-    private Date dateIn;
-    private Date dateOut;
-    private String value;
-    private String paymentMethod;
+public class Reserva {
 
-    public Reservation(Date dateIn, Date dateOut, String value, String paymentMethod) {
-        this.id = null; // El id se establece como nulo por defecto
-        this.dateIn = dateIn;
-        this.dateOut = dateOut;
-        this.value = value;
-        this.paymentMethod = paymentMethod;
+    private Integer id;
+    private Date fechaE;
+    private Date fechaS;
+    private String valor;
+    private String formaPago;
+
+
+    public Reserva(Date fechaE, Date fechaS, String valor, String formaPago) {
+        this.fechaE = fechaE;
+        this.fechaS = fechaS;
+        this.valor = valor;
+        this.formaPago = formaPago;
     }
 
-    public Reservation(Integer id, Date dateIn, Date dateOut, String value, String paymentMethod) {
+    public Reserva(Integer id, Date fechaE, Date fechaS, String valor, String formaPago) {
         this.id = id;
-        this.dateIn = dateIn;
-        this.dateOut = dateOut;
-        this.value = value;
-        this.paymentMethod = paymentMethod;
+        this.fechaE = fechaE;
+        this.fechaS = fechaS;
+        this.valor = valor;
+        this.formaPago = formaPago;
     }
 
     public Integer getId() {
@@ -33,19 +34,29 @@ public class Reservation {
         this.id = id;
     }
 
-    public Date getInDate() {
-        return dateIn;
+    public Date getfechaE() {
+        return fechaE;
     }
 
-    public Date getOutDate() {
-        return dateOut;
+    public Date getfechaS() {
+        return fechaS;
     }
 
-    public String getValue() {
-        return value;
+    public String getvalor() {
+        return valor;
     }
 
-    public String getPaymentMethod() {
-        return paymentMethod;
+    public String getformaPago() {
+        return formaPago;
     }
+
+
+//	@Override
+//	public String toString() {
+//		// TODO Auto-generated method stub
+//		return String.format("La reserva generada fue: %d, %s, %s, %s, %s", this.id, this.fechaE, this.fechaS, this.valor, this.formaPago);
+//	}
+//
+
+
 }
