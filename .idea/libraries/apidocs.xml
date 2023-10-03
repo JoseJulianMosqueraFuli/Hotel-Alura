@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="apidocs">
+    <CLASSES />
+    <JAVADOC>
+      <root url="file://$USER_HOME$/Downloads/c3p0-0.9.5.5.bin/c3p0-0.9.5.5/doc/apidocs" />
+      <root url="file://$USER_HOME$/Downloads/c3p0-0.9.5.5.bin/c3p0-0.9.5.5/doc/apidocs-oracle-thin" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$USER_HOME$/Downloads/c3p0-0.9.5.5.bin/c3p0-0.9.5.5/examples" />
+    </SOURCES>
+  </library>
+</component>
